@@ -22,7 +22,7 @@ const Layout = () => {
       </main>
       {/* Footer */}
       <footer className="flex justify-center p-2 bg-green-100 border-t-2 fixed bottom-0 w-full">
-        &copy; 2025 Website
+        <p>© {new Date().getFullYear()} Kids Genius. All rights reserved.</p>
       </footer>
     </div>
   );
