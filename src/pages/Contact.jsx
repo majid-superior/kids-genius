@@ -9,8 +9,11 @@ const Contact = () => {
     const phoneNumber = "923324737650";
     const encodedMessage = encodeURIComponent(message);
 
-    // Create WhatsApp URL
-    const whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    // // Create WhatsApp URL
+    // const whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    // Create direct WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
     // Open WhatsApp directly
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
