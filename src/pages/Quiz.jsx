@@ -96,7 +96,7 @@ const Quiz = () => {
     <div className="flex justify-center p-4 mt-20 xl:mt-30">
       <div className="flex flex-col text-center bg-white shadow-lg rounded-xl p-4">
         {!showResult ? (
-          <div className="w-2xl">
+          <div className="w-full xl:w-2xl">
             <h2 className="text-2xl xl:text-4xl font-bold mb-4 xl:mb-8">
               Question {currentQuestion + 1} of {quizQuestions.length}
             </h2>
@@ -136,14 +136,14 @@ const Quiz = () => {
             </p>
             {/* Wrong Answers Table */}
             {wrongAnswers.length > 0 && (
-              <div className="mb-8">
+              <div className="mb-10">
                 <h3 className="text-2xl xl:text-4xl font-bold mb-4 text-red-600">
                   Questions You Got Wrong:
                 </h3>
 
                 {/* Desktop Table (hidden on mobile) */}
                 <div className="hidden xl:block overflow-x-auto">
-                  <table className="min-w-full bg-white border border-gray-300">
+                  <table className="w-full bg-white border border-gray-300">
                     <thead>
                       <tr className="bg-gray-100">
                         <th className="py-2 px-3 border-b text-2xl text-left">
@@ -236,7 +236,7 @@ const Quiz = () => {
             )}
             <button
               onClick={restartQuiz}
-              className="px-6 py-3 bg-green-500 text-white text-2xl xl:text-4xl rounded-lg hover:bg-green-600 transition"
+              className="px-6 py-3 bg-green-500 text-white text-2xl xl:text-4xl mb-10 rounded-lg hover:bg-green-600 transition"
             >
               Restart Quiz
             </button>
